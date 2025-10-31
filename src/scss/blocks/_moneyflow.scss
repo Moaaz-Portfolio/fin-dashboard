@@ -1,0 +1,55 @@
+@use "../base/vars" as vars;
+.charts__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+
+  .charts__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    color: vars.$color-text;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .charts__controls {
+    background: #f4f7fb;
+    color: vars.$color-muted;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+  }
+
+  .charts__canvas-wrap {
+    position: relative;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* Responsive canvas heights */
+@media (max-width: 1024px) {
+  .charts__canvas-wrap { height: 260px; }
+}
+
+@media (max-width: 768px) {
+  .charts__canvas-wrap { height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .charts__canvas-wrap { height: 180px; }
+}
+
+@media (max-width: 360px) {
+  .charts__canvas-wrap { height: 140px; }
+}

@@ -1,0 +1,17 @@
+@use "base/reset";
+@use "base/vars";
+@use "base/dashboard";
+@use "blocks/header";
+@use "blocks/stats";
+@use "blocks/charts";
+@use "blocks/moneyflow";
+@use "blocks/expenses";
+@use "blocks/history";
+@use "blocks/sidebar";
+@use "blocks/savings";
+@use "blocks/table";
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}

@@ -1,0 +1,51 @@
+@use "../base/vars" as vars;
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1rem;
+  align-items: stretch;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  
+  &.charts-grid--lower {
+    grid-template-columns: 320px 1fr;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+
+    .charts__card {
+      padding: 1rem;
+    }
+
+    
+  }
+
+  .charts__card {
+    background: #fff;
+    padding: 1.4rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+}
+
+ 
+.overview {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+

@@ -1,0 +1,44 @@
+@use "../base/vars" as vars;
+.table__wrap {
+  overflow: auto;
+}
+
+.table__content {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.table__content th,
+.table__content td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: vars.$color-text;
+  white-space: nowrap;
+}
+
+/* Make tables behave on small screens: allow wrapping and slightly smaller text */
+@media (max-width: 768px) {
+  .table__content th,
+  .table__content td {
+    white-space: normal;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table__content th,
+  .table__content td {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .table__content th,
+  .table__content td {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.35rem;
+  }
+}

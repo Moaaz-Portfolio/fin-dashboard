@@ -1,0 +1,280 @@
+@use "../base/vars" as vars;
+
+.sidebar {
+  width: 331px;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    .sidebar__title {
+        padding: 0.5rem 0.5rem;
+        margin: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: vars.$color-text;
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
+  &__card-media {
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+        object-fit: cover;
+    }
+  }
+
+  /* Make the card image area more predictable on small screens */
+  @media (max-width: 768px) {
+    &__card-media img {
+      object-fit: cover;
+    }
+
+    & {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__card-top {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    z-index: 6;
+    color: #fff;
+    /* match Quick Transfer typography (dark title) but keep white color for contrast on the card image */
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  &__card-data {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, calc(100% - 32px));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.45);
+  box-sizing: border-box;
+    &-row {
+      display:flex;
+      justify-content:start;
+      gap:5rem;
+      width:100%;
+      align-items:center;
+    }
+
+    &-name,
+    &-expiry {
+      font-size:0.8rem;
+      color: rgba(255,255,255,0.95);
+      font-weight:600;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    &-number {
+      margin-top: 0.35rem;
+      font-size:1.05rem;
+      font-weight:800;
+      color: #fff;
+      text-align:start;
+      width:100%;
+      letter-spacing: 0.08rem;
+    }
+  }
+
+
+
+  &__card-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__balance {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  &__amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: vars.$color-text;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: vars.$color-muted;
+  }
+
+  &__status {
+    background: vars.$color-green-shade;
+    color: vars.$color-green;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+    &__quick {
+    background: #fff;
+    padding: 1.25rem;
+    border-radius: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-input {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &-contacts {
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+    }
+
+    &-contacts .sidebar__avatar-dot { display:inline-block }
+  }
+
+  &__title {
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    color: vars.$color-text;
+    font-size: 0.95rem;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #eef2f6;
+    margin-bottom: 0.5rem;
+    background: #f8fafc;
+  }
+
+  &__input-label {
+    font-size: 0.85rem;
+    color: vars.$color-muted;
+    font-weight: 600;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: vars.$color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &--secondary {
+      background: transparent;
+      color: vars.$color-text;
+      border: 1px solid #eef2f6;
+    }
+  }
+
+  &__add { display:flex; justify-content:center; align-items: center;  }
+  &__add-btn {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.5rem;
+    width: 100%;
+    background: #f3f9ff;
+    color: vars.$color-primary;
+    border: 1px solid rgba(0,179,255,0.12);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor:pointer;
+    font-weight:700;
+
+    @media (max-width:768px) {
+      width: 100%;
+      justify-content: center;
+      padding: 0.6rem;
+
+    }
+  }
+
+&__avatar-dot {
+    width: 32px;
+    height: 32px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: vars.$color-muted;
+    display: inline-block;
+    object-fit: cover;
+}
+
+  &__contacts-more {
+    background: transparent;
+    border: none;
+    color: vars.$color-muted;
+    font-size: 1.1rem;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 0.15rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__contacts-more svg { width: 18px; height: 18px; display: block; stroke: currentColor }
+
+  &__quick-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+}
+
+

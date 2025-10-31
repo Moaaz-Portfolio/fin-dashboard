@@ -1,0 +1,128 @@
+@use "../base/vars" as vars;
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__card {
+        background: #fff;
+        padding: 1rem;
+        border-left: 8px solid;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+
+    border-left-color: vars.$color-primary;
+
+        
+        &--success {
+            border-left-color: vars.$color-green;
+        }
+
+        &--warning {
+            border-left-color: vars.$color-orange;
+        }
+
+        &--yellow {
+            border-left-color: vars.$color-yellow;
+        }
+
+        &--danger {
+            border-left-color: vars.$color-red;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        color: vars.$color-muted;
+    }
+
+    &__value {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    &__badge {
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        border-radius: 8px;
+        color: #fff;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+
+    background-color: vars.$color-primary;
+        svg {
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+        
+        &--success {
+            color: vars.$color-green;
+            background-color: vars.$color-green-shade;
+        }
+
+        &--warning {
+            color: vars.$color-orange;
+            background-color: vars.$color-orange-shade;
+        }
+
+        &--yellow {
+            color: vars.$color-yellow;
+            background-color: vars.$color-yellow-shade;
+        }
+
+        &--danger {
+            color: vars.$color-red;
+            background-color: vars.$color-red-shade;
+        }
+    }
+}
+
+/* On tablets and phones show two stats per row for compact layout */
+@media (max-width: 768px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .stats__card {
+        padding: 0.75rem;
+    }
+
+    .stats__value {
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 480px) {
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .stats {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .stats__card {
+        padding: 0.6rem;
+    }
+
+    .stats__title { font-size: 0.9rem; }
+    .stats__value { font-size: 1.1rem; }
+}
