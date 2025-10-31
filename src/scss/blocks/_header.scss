@@ -83,6 +83,7 @@
         gap: 2rem;
         align-items: center;
         color: vars.$color-muted;
+        background: vars.$color-bg;
 
     @media (max-width: 767px) {
 
@@ -91,7 +92,6 @@
             left: 0;
             right: 0;
             flex-direction: column;
-            background-color: #fff;
             transform: translateY(-200%);
             transition: transform 0.3s ease;
             text-align: center;
