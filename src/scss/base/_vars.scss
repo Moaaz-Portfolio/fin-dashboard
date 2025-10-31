@@ -1,14 +1,51 @@
-$color-bg: #f6f8fa;
-$color-sidebar: #ffffff;
-$color-primary: #00B3FF;
-$color-secondary: #E3F6FE;
-$color-text: #15223C;
-$color-muted: #AFAFAF;
-$color-green: #2DD683;
-$color-green-shade: #D8FFEC;
-$color-red: #E74A51;
-$color-red-shade: #F8D7DA;
-$color-orange: #FA8B3A;
-$color-orange-shade: #FFE8D4;
-$color-yellow: #FED142;
-$color-yellow-shade: #FFF6CC;
+// Light mode colors
+:root {
+  --color-bg: #f6f8fa;
+  --color-sidebar: #ffffff;
+  --color-primary: #00B3FF;
+  --color-secondary: #E3F6FE;
+  --color-text: #15223C;
+  --color-muted: #AFAFAF;
+  --color-green: #2DD683;
+  --color-green-shade: #D8FFEC;
+  --color-red: #E74A51;
+  --color-red-shade: #F8D7DA;
+  --color-orange: #FA8B3A;
+  --color-orange-shade: #FFE8D4;
+  --color-yellow: #FED142;
+  --color-yellow-shade: #FFF6CC;
+}
+
+// Dark mode colors
+.dark {
+  --color-bg: #1a1a1a;
+  --color-sidebar: #2d2d2d;
+  --color-primary: #00B3FF;
+  --color-secondary: #1e3a5f;
+  --color-text: #ffffff;
+  --color-muted: #cccccc;
+  --color-green: #2DD683;
+  --color-green-shade: #1a3d2a;
+  --color-red: #E74A51;
+  --color-red-shade: #3d1a1a;
+  --color-orange: #FA8B3A;
+  --color-orange-shade: #3d2a1a;
+  --color-yellow: #FED142;
+  --color-yellow-shade: #3d3a1a;
+}
+
+// SCSS variables for backward compatibility (using CSS custom properties)
+$color-bg: var(--color-bg);
+$color-sidebar: var(--color-sidebar);
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-text: var(--color-text);
+$color-muted: var(--color-muted);
+$color-green: var(--color-green);
+$color-green-shade: var(--color-green-shade);
+$color-red: var(--color-red);
+$color-red-shade: var(--color-red-shade);
+$color-orange: var(--color-orange);
+$color-orange-shade: var(--color-orange-shade);
+$color-yellow: var(--color-yellow);
+$color-yellow-shade: var(--color-yellow-shade);

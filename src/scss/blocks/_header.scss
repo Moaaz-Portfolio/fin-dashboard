@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #fff;
+    background: vars.$color-bg;
     z-index: 100;
 
     &__container {

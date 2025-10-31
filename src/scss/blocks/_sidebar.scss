@@ -2,10 +2,10 @@
 
 .sidebar {
   width: 331px;
-  padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+background: vars.$color-bg;
 
   @media (max-width: 1024px) {
     flex-direction: row;
@@ -22,7 +22,7 @@
   }
 
   &__card {
-    background: #fff;
+    background: inherit;
     border-radius: 16px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.15);
     display: flex;
@@ -162,7 +162,7 @@
   }
 
     &__quick {
-    background: #fff;
+    background: inherit;
     padding: 1.25rem;
     border-radius: 16px;
     box-shadow: 0 1px 6px rgba(0,0,0,0.15);

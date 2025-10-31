@@ -1,9 +1,12 @@
+@use "../base/vars" as vars;
 .dashboard {
     /* Mobile-first: single-column layout by default */
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0.75rem 1rem;
+    background: vars.$color-bg;
+    margin-top: 2rem;
+
 
     &__main {
         display: flex;
@@ -12,19 +15,19 @@
     }
 }
 
-/* Small phones */
-@media (max-width: 480px) {
-    .dashboard {
-        gap: 0.75rem;
-        padding: 0.5rem 0.75rem;
-    }
-}
-
 /* Very small phones (<=360px) */
 @media (max-width: 360px) {
     .dashboard {
         gap: 0.5rem;
         padding: 0.4rem 0.5rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .dashboard {
+        gap: 0.75rem;
+        padding: 0.5rem 0.75rem;
     }
 }
 
@@ -39,6 +42,7 @@
 /* Desktop and large screens: two-column layout with left sidebar */
 @media (min-width: 1025px) {
     .dashboard {
+        margin-top: 2rem;
         grid-template-columns: auto 1fr;
         gap: 3rem;
         padding: 0rem 3rem;
