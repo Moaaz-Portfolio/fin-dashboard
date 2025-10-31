@@ -2,12 +2,14 @@
 
 A responsive finance dashboard built with HTML, SCSS, and JavaScript. Features include expense tracking, revenue charts, and a mobile-friendly navigation.
 
+**Inspired by:** [Figma UI Kit - Finance Dashboard](https://www.figma.com/design/Cps3N3zaySo9Cz9pSFnCMT/Figma-UI-kit---Finance-Dashboard--Community---Community-?node-id=6401-380&p=f&t=emt43vJuk2flbQr9-0)
+
 ## Screenshots
 
-## Desktop
+### Desktop
 ![Desktop View](screenshots/desktop.png)
 
-## Mobile
+### Mobile
 ![Mobile View](screenshots/mobile.png)
 
 ## Features
