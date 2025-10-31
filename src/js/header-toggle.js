@@ -21,7 +21,7 @@
     // Update logo on load
     const logoImg = document.querySelector('.header__logo img');
     if (logoImg) {
-      logoImg.src = currentTheme === 'dark' ? 'src/img/logo_dark.svg' : 'src/img/logo.svg';
+      logoImg.src = `${import.meta.env.BASE_URL}img/logo_${currentTheme === 'dark' ? 'dark' : ''}.svg`;
     }
 
     darkModeToggle.addEventListener('click', function () {
@@ -32,8 +32,7 @@
       // Update logo
       const logoImg = document.querySelector('.header__logo img');
       if (logoImg) {
-        logoImg.src =
-          theme === "dark" ? "src/img/logo_dark.svg" : "src/img/logo.svg";
+        logoImg.src = `${import.meta.env.BASE_URL}img/logo_${theme === 'dark' ? 'dark' : ''}.svg`;
       }
     });
   }
