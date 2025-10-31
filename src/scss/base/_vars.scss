@@ -1,11 +1,11 @@
-// Light mode colors
+// Light mode
 :root {
   --color-bg: #f6f8fa;
   --color-sidebar: #ffffff;
   --color-primary: #00B3FF;
   --color-secondary: #E3F6FE;
   --color-text: #15223C;
-  --color-muted: #AFAFAF;
+  --color-muted: #9a9a9a;
   --color-green: #2DD683;
   --color-green-shade: #D8FFEC;
   --color-red: #E74A51;
@@ -16,22 +16,22 @@
   --color-yellow-shade: #FFF6CC;
 }
 
-// Dark mode colors
+// Dark mode
 .dark {
-  --color-bg: #1a1a1a;
-  --color-sidebar: #2d2d2d;
-  --color-primary: #00B3FF;
-  --color-secondary: #1e3a5f;
-  --color-text: #ffffff;
-  --color-muted: #cccccc;
+  --color-bg: #121418;              /* أغمق سنة مع لمسة زُرقة خفيفة */
+  --color-sidebar: #1e1f23;         /* contrast محسوب مع الخلفية */
+  --color-primary: #00B3FF;         /* خليه ثابت عشان يحافظ على هوية البراند */
+  --color-secondary: #173047;       /* بدل الأزرق القاتم الغامق الغير طبيعي */
+  --color-text: #e3e6eb;            /* رمادي فاتح ناعم مش أبيض ناصع */
+  --color-muted: #9da3af;
   --color-green: #2DD683;
-  --color-green-shade: #1a3d2a;
+  --color-green-shade: #183a2d;
   --color-red: #E74A51;
-  --color-red-shade: #3d1a1a;
+  --color-red-shade: #3a2222;
   --color-orange: #FA8B3A;
-  --color-orange-shade: #3d2a1a;
+  --color-orange-shade: #3a2a1e;
   --color-yellow: #FED142;
-  --color-yellow-shade: #3d3a1a;
+  --color-yellow-shade: #3a361e;
 }
 
 // SCSS variables for backward compatibility (using CSS custom properties)
